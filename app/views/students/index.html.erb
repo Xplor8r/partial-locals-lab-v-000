@@ -1,7 +1,7 @@
-<%= form_for student do |f|%>
+<%= form_for @student do |f| %>
 <p>
   <%= f.collection_select :student_name, Student.all, :name, :name %>
-  <%= f.submit "Search", name: nil %>
+  <%= f.submit value="Search" %>
 </p>
 <% end %>
 
