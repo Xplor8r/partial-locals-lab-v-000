@@ -1,0 +1,10 @@
+<%= form_for student do |f|%>
+<p>
+  <%= f.collection_select :student_name, Student.all, :name, :name %>
+  <%= f.submit "Search", name: nil %>
+</p>
+<% end %>
+
+<% @students.each do |student| %>
+<%= render partial:'student', locals: {student: student} %>
+<% end %>
