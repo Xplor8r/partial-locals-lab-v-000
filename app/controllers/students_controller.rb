@@ -22,6 +22,7 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+    rendr 'index'
   end
 
   def student_params
